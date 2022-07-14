@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{LANGUAGES}}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block title %}
+        <title>{{business.title}}</title>
+    {% endblock title %}
+    <meta name="keywords" content="Vente avec facilité de paiement en algérie 100% halal banque esalamique">
+    <meta name="description" content="{{business.web_description}}">
+    <meta name="author" content="p-themes">
+    <meta name="robots" content="index, follow" />
+
+    <meta name="language" content="{{LANGUAGES}}" />
+    {% if business.favicon  %}
+      
+    <link rel="apple-touch-icon" sizes="180x180" href="{{business.favicon.url}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{business.favicon.url}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{business.favicon.url}}">
+    <link rel="shortcut icon" href="{{business.favicon.url}}">
+    {% endif %}
+
+    <meta name="apple-mobile-web-app-title" content="{{business.title}}">
+    <meta name="application-name" content="{{business.name}}">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="theme-color" content="#ffffff">
+    
+
+
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/fontawesome-free/css/all.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/animate/animate.min.css" %}">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/magnific-popup/magnific-popup.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/owl-carousel/owl.carousel.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+
+    <!-- Main CSS File -->
+
+    <meta content="Octopus Consulting" name="author" />
+    <meta property="og:url" content="https://www.b-andgo.dz/" />
+    <meta property="og:title" content="{{business.title}}" />
+    <meta property="og:type" content="Services" />
+    <meta property="og:site_name" content="{{business.name}} | {{business.title}}"/>
+
+
+</head>
+<body>
+    {% if business.tag_body %}
+        {{business.tag_body|safe}}
+    {% endif %}
+        <header class="header {% if request.path == '/fr/' %}header-transparent{% endif %}">        </header>
+
+    {% block content %}
+    
+    {% endblock content %}
+    <h2>HELLOOOO</h2>
+    <a href=""></a>
+</body>
+<!-- 40432:14-->
+</html>
